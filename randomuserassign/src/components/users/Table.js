@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { UserContext } from "../../context/user-context";
-// import { UserContext } from "./context/user-context";
 import "../../components/users/Table.css";
+import { LightImageBox } from "../Layout/LightImageBox";
 
 export const Table = () => {
   const userCtx = useContext(UserContext);
@@ -32,7 +32,8 @@ export const Table = () => {
                 <div className="table-body-cell">{data.dob.date}</div>
                 <div className="table-body-cell">{data.location.city}</div>
                 <div className="table-body-cell">
-                  <img src={data.picture.medium} alt="userImage"/>
+                  {/* <img src={data.picture.medium} alt="userImage"/> */}
+                  <LightImageBox userImg = {data.picture.medium}/>
                 </div>
               </div>
             ))}
