@@ -1,7 +1,7 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { UserContext } from './user-context';
 
-export const UserDetailsProvider = (props) => {
+export const UserContextProvider = (props) => {
 
   const [userDetails, setUserDetails] = useState({});
   const [error, setError] = useState("");
@@ -16,6 +16,8 @@ export const UserDetailsProvider = (props) => {
             const {results} = response;
             if(results){
                 setUserDetails(results);
+                console.log("ee",results)
+                console.log(userDetails);
             }
         })
         .catch((error)=>{

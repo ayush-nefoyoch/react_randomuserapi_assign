@@ -1,9 +1,9 @@
+import { Table } from "./components/users/Table";
+
 function App() {
-  return (
-    <div className="App">
-      <h1>A</h1>
-    </div>
-  );
+    return(
+      <Table/>
+    )
 }
 
 export default App;
