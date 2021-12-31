@@ -3,7 +3,7 @@ import { UserContext } from "../../context/user-context";
 import { Link } from "react-router-dom";
 import "./ShowDetails.css";
 
-export const ShowDetails = ({ userData }) => {
+export const ShowDetails = () => {
   const userCtx = useContext(UserContext);
   const id = userCtx.id;
   console.log(userCtx.userDetails);
@@ -12,7 +12,7 @@ export const ShowDetails = ({ userData }) => {
       <div className="showDetails">
         <Link
           className="mynotes"
-          style={{ textDecoration: "none", color: "red" }}
+          style={{ textDecoration: "none", color: "white" }}
           to="/"
         >
           See All Users
